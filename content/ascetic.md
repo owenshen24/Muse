@@ -1,4 +1,5 @@
 title: Ascetic Aesthetic
+tags: aesthetic
 
 I have a Mood or a Feel that I care a lot about. It's a little like minimalism. It's a little like praising deprivation. It's a little like mindfulness. I think that there is a lot to be mindful of in the space of doing things like being hungry / sore / lustful. In general, these are states where you have a feel of Wanting.
 

@@ -1,4 +1,5 @@
 title: Controlling vs Controlled Attention
+tags: attention
 
 I often think about activities we can engage in as one of two types: activities in which we're directing our attention and activities where our attention is being sucked in.
 
