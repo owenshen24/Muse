@@ -15,7 +15,7 @@ for md_post in os.listdir('content'):
     # Grab the date last modified.
     time = int(os.path.getmtime(file_path))
     last_modified_time = datetime.fromtimestamp(
-    time).strftime('%Y-%m-%d %H:%M:%S')
+    time).strftime('%Y-%m-%d %H:%M')
 
     # Open and parse the file.
     with open(file_path, 'r') as file:

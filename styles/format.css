@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant|Roboto:900');
+
+.title {
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 1.5em;
+}
+
+a {
+  color: rgb(135, 32, 64);
+}
+
+a:hover {
+  color: rgb(198, 77, 115);
+}
+
+.content, .date, .tags-bar {
+  font-family: 'Assistant', 'sans-serif';
+}
+
+.content {
+  font-size: 1.15em;
+}
+
+.post {
+  margin-bottom: 2em;
+  padding: 1em 1em 1em 1em;
+  border: 2px solid;
+  border-color: rgb(221, 221, 221);
+}
+
+.post > hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    padding: 0;
+}
