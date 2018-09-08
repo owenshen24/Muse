@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/sizing.css">
 
     <!-- Scripts -->
-    <script src="scripts/auto-scroll.js" defer></script>
+    <script src="scripts/ui-interactions.js" defer></script>
 
     <!-- JQuery -->
     <script
@@ -23,30 +23,40 @@
 
   <body>
 
-    <div class="container">
+    <div class="grid">
 
-      {% for post in posts %}
-      <div id="{{post.anchor}}" class="post">
-        <div class="top-bar">
-          <div class="title">
-          <a href="{{'#' + post.anchor}}">{{post.title}}</a>
+      <div class="grid-spacer"></div>
+
+      <div class="container">
+
+        {% for post in posts %}
+        <div id="{{post.anchor}}" class="post">
+          <div class="top-bar">
+            <div class="minimize-button"></div>
+            <div class="title">
+              <a href="{{'#' + post.anchor}}">{{post.title}}</a>
+            </div>
+            <div class="date">Last Updated: {{post.date}}
+            </div>
           </div>
-          <div class="date">Last Updated: {{post.date}}</div>
-        </div>
-        <div class="content">
-          {{post.content}}
-        </div>
+          <div class="content">
+            {{post.content}}
+          </div>
 
-        <hr/>
+          <hr/>
 
-        <div class="tags-bar">
-          <strong>tags:</strong>
-          {% for t in post.tags %}
-          <span class="tag-item">{{t}}</span>
-          {% endfor %}
+          <div class="tags-bar">
+            <strong>tags:</strong>
+            {% for t in post.tags %}
+            <span class="tag-item">{{t}}</span>
+            {% endfor %}
+          </div>
         </div>
+        {% endfor %}
+
       </div>
-      {% endfor %}
+
+      <div class="grid-spacer"></div>
 
     </div>
 

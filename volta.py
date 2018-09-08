@@ -31,10 +31,14 @@ for md_post in os.listdir('content'):
             'date': last_modified_time,
             'timestamp': time,
             'anchor': anchor,
-      'tags': tags
+            'tags': tags
         }
-
+        # Add the post to the POSTS dictionary
         POSTS[anchor] = data
+        file.close()
+
+    # Rename the file to be the anchor
+    os.rename(file_path, os.path.join('content',(anchor + '.md')))
 
 # Order posts from newest to oldest
 POSTS = {

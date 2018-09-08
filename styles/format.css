@@ -5,6 +5,18 @@
   font-size: 1.5em;
 }
 
+.minimize-button {
+  float: right;
+  font-size: 2em;
+  padding: 0px;
+  cursor: pointer;
+  color: rgb(135, 32, 64);
+}
+
+.minimize-button:hover {
+  opacity: 50%;
+}
+
 a {
   color: rgb(135, 32, 64);
 }
