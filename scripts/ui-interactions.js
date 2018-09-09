@@ -8,17 +8,27 @@ $(document).ready(function() {
   }
 
   // Set up minimize-button functionality:
-  $(".minimize-button").html("-");
-  $(".minimize-button").click(function() {
+    $(".minimize-button").addClass("fa-minus-circle")
 
+  // Change opacity upon hover:
+  $(".minimize-button").mouseenter(function(){
+    $(this).parent().parent().find(".content").css("opacity", "0.5");
+  });
+  $(".minimize-button").mouseleave(function(){
+    $(this).parent().parent().find(".content").css("opacity", "1.0");
+  });
+
+  // Set up hide/show onclick:
+  $(".minimize-button").click(function() {
     // Toggle + or -
-    if ($(this).html() === "+") {
-      $(this).html("-");
+    if ($(this).hasClass("fa-minus-circle")) {
+      $(this).removeClass("fa-minus-circle");
+      $(this).addClass("fa-plus-circle");
     }
     else {
-      $(this).html("+");
+      $(this).addClass("fa-minus-circle");
+      $(this).removeClass("fa-plus-circle");
     }
-
     // Toggle content
     $(this).parent().parent().find(".content").toggle();
 

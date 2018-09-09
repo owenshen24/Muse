@@ -7,12 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse</title>
 
-    <!-- Stylesheet -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/format.css">
     <link rel="stylesheet" href="styles/sizing.css">
 
+    <!-- Semantic UI components for search -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/input.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/search.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/3e4be7e583.css">
+
     <!-- Scripts -->
     <script src="scripts/ui-interactions.js" defer></script>
+    <script src="scripts/fuzzy-search.js" defer></script>
 
     <!-- JQuery -->
     <script
@@ -23,16 +29,26 @@
 
   <body>
 
+    <!-- Posts container -->
     <div class="grid">
 
       <div class="grid-spacer"></div>
 
       <div class="container">
 
+        <!-- Search bar -->
+        <div class="ui search search-bar">
+          <input class="prompt" type="text" placeholder="Search for posts">
+          <button class="search-button">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+          <div class="results"></div>
+        </div>
+
         
         <div id="Anticipated-Fear-in-Mental-Explorations" class="post">
           <div class="top-bar">
-            <div class="minimize-button"></div>
+            <i class="fa fa-lg minimize-button"></i>
             <div class="title">
               <a href="#Anticipated-Fear-in-Mental-Explorations">Anticipated Fear in Mental Explorations</a>
             </div>
@@ -64,7 +80,7 @@
         
         <div id="Ascetic-Aesthetic" class="post">
           <div class="top-bar">
-            <div class="minimize-button"></div>
+            <i class="fa fa-lg minimize-button"></i>
             <div class="title">
               <a href="#Ascetic-Aesthetic">Ascetic Aesthetic</a>
             </div>
@@ -104,7 +120,7 @@
         
         <div id="Reward-Loops" class="post">
           <div class="top-bar">
-            <div class="minimize-button"></div>
+            <i class="fa fa-lg minimize-button"></i>
             <div class="title">
               <a href="#Reward-Loops">Reward Loops</a>
             </div>
@@ -136,7 +152,7 @@
         
         <div id="Controlling-vs-Controlled-Attention" class="post">
           <div class="top-bar">
-            <div class="minimize-button"></div>
+            <i class="fa fa-lg minimize-button"></i>
             <div class="title">
               <a href="#Controlling-vs-Controlled-Attention">Controlling vs Controlled Attention</a>
             </div>

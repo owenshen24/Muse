@@ -5,18 +5,11 @@
   font-size: 1.5em;
 }
 
-.minimize-button {
-  float: right;
-  font-size: 2em;
-  padding: 0px;
-  cursor: pointer;
-  color: rgb(135, 32, 64);
+.content, .date, .tags-bar, .prompt {
+  font-family: 'Assistant', 'sans-serif';
 }
 
-.minimize-button:hover {
-  opacity: 50%;
-}
-
+/* Red Colors */
 a {
   color: rgb(135, 32, 64);
 }
@@ -25,8 +18,43 @@ a:hover {
   color: rgb(198, 77, 115);
 }
 
-.content, .date, .tags-bar {
-  font-family: 'Assistant', 'sans-serif';
+/* Search bar */
+.search-bar {
+  padding-bottom: 1em;
+}
+
+.search-button {
+  float: right;
+
+  display: inline-block;
+  height: 38px;
+  width: 15%;
+
+  color: white;
+
+  background-color: rgb(135, 32, 64);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.search-button:hover {
+  background-color: rgb(198, 77, 115);
+}
+
+.prompt {
+  width: 75%;
+}
+
+.minimize-button {
+  float: right;
+  font-size: 2em;
+  padding: 0px;
+  cursor: pointer;
+  color: rgb(135, 32, 64);
+  position: relative;
+  top: 5px;
 }
 
 .content {
