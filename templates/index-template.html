@@ -19,6 +19,7 @@
     <!-- Scripts -->
     <script src="scripts/ui-interactions.js" defer></script>
     <script src="scripts/fuzzy-search.js" defer></script>
+    <script src="scripts/elasticlunr.min.js" ></script>
 
     <!-- JQuery -->
     <script
@@ -35,6 +36,13 @@
       <div class="grid-spacer"></div>
 
       <div class="container">
+
+        <!-- Notification for search -->
+        <div id="search-container">
+          <div id="search-notification">
+            No search results found. Showing all posts.
+          </div>
+        </div>
 
         <!-- Search bar -->
         <div class="ui search search-bar">

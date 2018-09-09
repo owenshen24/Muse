@@ -49,7 +49,7 @@ POSTS = {
 
 # Render post in Jinja2
 env = Environment(loader=PackageLoader('volta', 'templates'))
-index_template = env.get_template('index.html')
+index_template = env.get_template('index-template.html')
 index_html_content = index_template.render(posts =
     [POSTS[post] for post in POSTS])
 

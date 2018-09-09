@@ -5,8 +5,23 @@
   font-size: 1.5em;
 }
 
-.content, .date, .tags-bar, .prompt {
+.content, .date, .tags-bar, .prompt, #search-notification {
   font-family: 'Assistant', 'sans-serif';
+}
+
+#search-notification {
+  padding: 1em 1em 1em 1em;
+  background-color: rgb(198, 77, 115);
+  color: white;
+  bottom: 0;
+  position: fixed;
+  display: none;
+  text-align: center;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* Red Colors */
