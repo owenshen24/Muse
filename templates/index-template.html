@@ -40,7 +40,6 @@
         <!-- Notification for search -->
         <div id="search-container">
           <div id="search-notification">
-            No search results found. Showing all posts.
           </div>
         </div>
 
@@ -72,7 +71,10 @@
           <div class="tags-bar">
             <strong>tags:</strong>
             {% for t in post.tags %}
-            <span class="tag-item">{{t}}</span>
+            <span class="tag-item">&nbsp<strong>{{t}}</strong></span>
+              {% if loop.nextitem is defined %}
+                <span>,</span>
+              {% endif %}
             {% endfor %}
           </div>
         </div>

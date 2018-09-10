@@ -28,9 +28,16 @@
 a {
   color: rgb(135, 32, 64);
 }
-
 a:hover {
   color: rgb(198, 77, 115);
+}
+
+.tag-item {
+  cursor: pointer;
+  color: gray;
+}
+.tag-item:hover {
+  color: lightgray;
 }
 
 /* Search bar */
@@ -40,13 +47,10 @@ a:hover {
 
 .search-button {
   float: right;
-
   display: inline-block;
   height: 38px;
   width: 15%;
-
   color: white;
-
   background-color: rgb(135, 32, 64);
   border-radius: 10px;
   border: none;

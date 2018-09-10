@@ -57,6 +57,10 @@ index_html_content = index_template.render(posts =
 with open('index.html', 'w') as file:
     file.write(index_html_content)
 
+# Remove content from posts to reduce JSON size:
+for p in POSTS:
+    POSTS[p].pop('content')
+
 # Write POSTS to POSTS.json
 with open('POSTS.json', 'w') as file:
     json.dump(POSTS, file)

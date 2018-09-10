@@ -1,6 +1,18 @@
 // Set up the fuzzy search module
 $(document).ready(function() {
 
+  // Show notification function:
+  var showNotification = function(text) {
+
+    // Set text
+    $("#search-notification").html(text);
+
+    // Show notification
+    $("#search-notification")
+    .fadeToggle("slow", "linear").delay(1000)
+    .fadeToggle("slow", "linear");
+  };
+
   // Set up indexing for title and tags:
   var index = elasticlunr(function() {
     this.addField('title');
@@ -26,19 +38,17 @@ $(document).ready(function() {
     // If no search results, show all posts:
     if (results.length == 0) {
       $(".post").show();
-
       // Show notification that search failed:
-      $("#search-notification")
-      .fadeToggle("slow", "linear").delay(1000)
-      .fadeToggle("slow", "linear");
-
+      showNotification('No search results found. Showing all posts.');
       return null;
     }
-
-    // Iterate through and show only the results:
-    $(".post").hide();
-    for (r in results) {
-      $("#" + results[r].ref).show();
+    else {
+      // Else, iterate through and show only the results:
+      $(".post").hide();
+      showNotification("Showing results for '" + phrase + "'");
+      for (r in results) {
+        $("#" + results[r].ref).show();
+      }
     }
   };
 
@@ -53,6 +63,11 @@ $(document).ready(function() {
     (k.keyCode && k.keyCode == 13)) {
       search($(this).val());
     }
+  });
+
+  // Search on tag click
+  $(".tag-item").click(function() {
+    search($(this).text());
   });
 
 });
