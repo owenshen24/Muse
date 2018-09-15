@@ -33,6 +33,11 @@ $(document).ready(function() {
 
   // Set up search function
   var search = function(phrase) {
+
+    // Scroll to top of page
+    window.scrollTo(0,0);
+
+    // Search for results
     let results = index.search(phrase);
 
     // If no search results, show all posts:
