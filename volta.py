@@ -1,9 +1,13 @@
 import os
 import json
 import time
+import PyRSS2Gen
 from datetime import datetime
 from jinja2 import Environment, PackageLoader
 from markdown2 import markdown
+
+# Base URL
+URL = "https://owenshen24.github.io/muse/"
 
 # JSON of all blog posts
 POSTS = {}
@@ -46,6 +50,25 @@ POSTS = {
         key=lambda post: POSTS[post]['timestamp'],
         reverse=True)
 }
+
+# Create XML file for RSS readers
+rss_items = []
+for p in POSTS:
+    rss_items.append(
+    	PyRSS2Gen.RSSItem(
+    	  title = POSTS[p]['title'],
+          link = URL + "#" + POSTS[p]["anchor"]
+          )
+  )
+rss = PyRSS2Gen.RSS2(
+  title = "Muse",
+  link = URL,
+  description = "Owen's short-form blog",
+  lastBuildDate = datetime.now(),
+  items = rss_items
+  )
+rss.write_xml(open("muse.xml", "w"))
+
 
 # Render post in Jinja2
 env = Environment(loader=PackageLoader('volta', 'templates'))
