@@ -19,19 +19,46 @@ $(document).ready(function() {
   });
 
   // Set up hide/show onclick:
-  $(".minimize-button").click(function() {
+  var togglePost = function(post) {
     // Toggle + or -
-    if ($(this).hasClass("fa-minus-circle")) {
-      $(this).removeClass("fa-minus-circle");
-      $(this).addClass("fa-plus-circle");
+    if ($(post).hasClass("fa-minus-circle")) {
+      $(post).removeClass("fa-minus-circle");
+      $(post).addClass("fa-plus-circle");
     }
     else {
-      $(this).addClass("fa-minus-circle");
-      $(this).removeClass("fa-plus-circle");
+      $(post).addClass("fa-minus-circle");
+      $(post).removeClass("fa-plus-circle");
     }
     // Toggle content
-    $(this).parent().parent().find(".content").toggle();
+    $(post).parent().parent().find(".content").toggle();
+  }
 
+  $(".minimize-button").click(function() {
+    togglePost(this);
+  });
+
+  $(".hide-all-button").click(function() {
+    var showAll = $(this).hasClass("showAll");
+    $.each($(".minimize-button"), function() {
+      if (showAll) {
+        if (! $(this).hasClass("fa-minus-circle")) {
+          togglePost(this);
+        }
+      }
+      else {
+        if ($(this).hasClass("fa-minus-circle")) {
+          togglePost(this);
+        }
+      }
+    });
+    if (showAll) {
+      $(this).removeClass("showAll");
+      $(this).empty().text("Minimize All");
+    }
+    else {
+      $(this).addClass("showAll");
+      $(this).empty().text("Expand All");
+    }
   });
 
 });

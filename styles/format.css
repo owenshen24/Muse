@@ -45,21 +45,28 @@ a:hover {
   padding-bottom: 1em;
 }
 
-.search-button {
-  float: right;
-  display: inline-block;
+.search-button, .hide-all-button {
   height: 38px;
-  width: 15%;
   color: white;
   background-color: rgb(135, 32, 64);
-  border-radius: 10px;
   border: none;
   cursor: pointer;
   box-sizing: border-box;
 }
 
-.search-button:hover {
+.search-button {
+  float: right;
+  width: 15%;
+  border-radius: 10px;
+}
+
+.search-button:hover, .hide-all-button:hover {
   background-color: rgb(198, 77, 115);
+}
+
+.hide-all-button {
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .prompt {
