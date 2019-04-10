@@ -66,15 +66,14 @@ a:hover {
 }
 
 .hide-all-button {
-  margin-right: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
   font-weight: bold;
-  float: right;
-  width: 15%;
+  display: block;
 }
 
 .prompt {
-  width: 60%;
+  width: 65%;
 }
 
 .minimize-button {
@@ -108,18 +107,18 @@ a:hover {
 }
 
 /* Center the posts column */
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-}
+} */
 
-.container {
+ .container {
   margin: auto;
 }
 
 /* Phone width */
 .container {
-  width: 100%;
+  width: 90%;
 }
 
 /* For tablet width */
@@ -130,8 +129,8 @@ a:hover {
 }
 
 /* For normal computer width */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 60%;
+    width: 50%;
   }
 }
