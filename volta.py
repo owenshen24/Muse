@@ -3,7 +3,7 @@ import json
 import time
 import PyRSS2Gen
 from datetime import datetime
-from jinja2 import Environment, PackageLoader
+from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
 
 # Base URL
@@ -12,7 +12,7 @@ URL = "https://owenshen24.github.io/muse/"
 # JSON of all blog posts
 POSTS = {}
 
-# Go through all posts and populate POSTS.
+# Go through all posts and populate POSTS
 for md_post in os.listdir('content'):
     file_path = os.path.join('content', md_post)
 
@@ -44,6 +44,7 @@ for md_post in os.listdir('content'):
 
     # Rename the file to be the anchor
     os.rename(file_path, os.path.join('content',(anchor + '.md')))
+    print("Parsed: " + anchor)
 
 # Order posts from newest to oldest
 POSTS = {
@@ -71,7 +72,7 @@ rss = PyRSS2Gen.RSS2(
 rss.write_xml(open("muse.xml", "w"))
 
 # Render post in Jinja2
-env = Environment(loader=PackageLoader('volta', 'templates'))
+env = Environment(loader=FileSystemLoader('templates'))
 index_template = env.get_template('index-template.html')
 index_html_content = index_template.render(posts =
     [POSTS[post] for post in POSTS])
