@@ -52,12 +52,13 @@ a:hover {
   border: none;
   cursor: pointer;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 .search-button {
-  float: right;
-  width: 15%;
+  width: 10%;
   border-radius: 10px;
+  margin-left: 10px;
 }
 
 .search-button:hover, .hide-all-button:hover {
@@ -65,13 +66,15 @@ a:hover {
 }
 
 .hide-all-button {
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
   font-weight: bold;
+  float: right;
+  width: 15%;
 }
 
 .prompt {
-  width: 75%;
+  width: 60%;
 }
 
 .minimize-button {

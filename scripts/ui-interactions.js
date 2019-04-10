@@ -18,6 +18,14 @@ $(document).ready(function() {
     $(this).parent().parent().find(".content").css("opacity", "1.0");
   });
 
+  // Hide-all-button opacity change on hover:
+  $(".hide-all-button").mouseenter(function(){
+    $(".post").css("opacity", "0.5");
+  });
+  $(".hide-all-button").mouseleave(function(){
+    $(".post").css("opacity", "1.0");
+  });
+
   // Set up hide/show onclick:
   var togglePost = function(post) {
     // Toggle + or -
