@@ -26,6 +26,7 @@ for md_post in os.listdir('content'):
         parsed_file = markdown(file.read(), extras=['metadata'])
         title = parsed_file.metadata['title']
         anchor = title.replace(' ', '-')
+        # tags is an optional metadata param
         tags = []
         if ('tags' in parsed_file.metadata.keys()):
             tags = parsed_file.metadata['tags'].replace(' ', '').split(',')
@@ -68,7 +69,6 @@ rss = PyRSS2Gen.RSS2(
   items = rss_items
   )
 rss.write_xml(open("muse.xml", "w"))
-
 
 # Render post in Jinja2
 env = Environment(loader=PackageLoader('volta', 'templates'))
