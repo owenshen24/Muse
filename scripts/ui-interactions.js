@@ -53,11 +53,11 @@ $(document).ready(function() {
     });
     if (showAll) {
       $(this).removeClass("showAll");
-      $(this).empty().text("Minimize All");
+      $(this).empty().text("Hide All");
     }
     else {
       $(this).addClass("showAll");
-      $(this).empty().text("Expand All");
+      $(this).empty().text("Open All");
     }
   });
 
