@@ -56,7 +56,7 @@ a:hover {
 }
 
 .search-button {
-  width: 10%;
+  width: 8%;
   border-radius: 10px;
   margin-left: 10px;
 }
@@ -66,14 +66,14 @@ a:hover {
 }
 
 .hide-all-button {
-  margin-bottom: 10px;
+  margin-left: 10px;
   border-radius: 10px;
   font-weight: bold;
-  display: block;
+  width: 15%;
 }
 
 .prompt {
-  width: 65%;
+  width: 60%;
 }
 
 .minimize-button {
@@ -83,7 +83,7 @@ a:hover {
   cursor: pointer;
   color: rgb(135, 32, 64);
   position: relative;
-  top: 5px;
+  width: 10%;
 }
 
 .content {
@@ -118,13 +118,19 @@ a:hover {
 
 /* Phone width */
 .container {
-  width: 90%;
+  width: 95%;
 }
 
 /* For tablet width */
 @media only screen and (min-width: 768px) {
   .container {
-    width: 75%;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    width: 62.5%;
   }
 }
 
