@@ -73,7 +73,7 @@ a:hover {
 }
 
 .prompt {
-  width: 60%;
+  width: 50%;
 }
 
 .minimize-button {
@@ -138,5 +138,8 @@ a:hover {
 @media only screen and (min-width: 1200px) {
   .container {
     width: 50%;
+  }
+  .prompt {
+  width: 65%;
   }
 }
